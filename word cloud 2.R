@@ -2,6 +2,7 @@
 
 #(https://www.r-graph-gallery.com/the-wordcloud2-library/)
 
+
 # library : install it first
 library(wordcloud2) 
 
@@ -9,7 +10,16 @@ library(wordcloud2)
 head(demoFreq)
 
 #wordcloud
-wordcloud2(demoFreq, size=1.6)
+?wordcloud2
+word=c('consumer marketing','marketing research','ERC','SAPM','legal environment','Strategic Management','CIS')
+freq=c(30,15,20,36,32,26,13)
+dfl=data.frame(word, freq)
+dfl
+rownames(dfl)=word
+head(dfl)
+#dfl=head(demofreq)
+wordcloud2(dfl,size=.4)
+
 
 # Gives a proposed palette
 wordcloud2(demoFreq, size=1.6, color='random-dark')
@@ -32,6 +42,7 @@ wordcloud2(demoFreq, size = 0.7, shape = 'star')
 
 #rotation
 ww=wordcloud2(demoFreq, size = 2.3, minRotation = -pi/6, maxRotation = -pi/6, rotateRatio = 1)
+
 ww
 
 #chinese
@@ -46,3 +57,4 @@ letterCloud( demoFreq, word = "PEACE", color="white", backgroundColor="pink")
 
 
 #see the link : https://www.r-graph-gallery.com
+

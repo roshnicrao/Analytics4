@@ -51,3 +51,4 @@ rquery.wordcloud(x=url, type="url")
 
 url = "http://www.sthda.com/english/wiki/create-and-format-powerpoint-documents-from-r-software"
 rquery.wordcloud(x=url, type="url")
+
